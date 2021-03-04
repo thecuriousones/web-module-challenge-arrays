@@ -151,11 +151,15 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
+
 function removeFlavorByName(originalFlavors){
     originalFlavors.splice(28, 1,)
     return(originalFlavors);
 }
+
 removeFlavorByName(originalFlavors, "Rocky Road")
+
+
 
 
 
@@ -180,8 +184,11 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(originalFlavors){
-    /*your code here*/
+    originalFlavors.includes('Chocolate', 0,);
+    let filteredArray = ['Chocolate', 'Chocolate Almond', 'Chocolate Chip', 'Chocolate Fudge', 'Chocolate Mint', 'Chocolate Ribbon' ]
+    return(filteredArray);
 }
+filterByWord(originalFlavors, "Chocolate")
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
