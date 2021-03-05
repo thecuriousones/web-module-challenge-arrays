@@ -66,11 +66,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(originalFlavors){
-    const cloneFlavors = [...originalFlavors];
-    console.log(originalFlavors.length);
-    return(true);
-}
+function is31Flavors(arr) {
+    if(arr.length === 31) {
+      return true
+    } else {
+      return false
+    }
+  }
 
 is31Flavors(originalFlavors)
 
@@ -87,10 +89,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(originalFlavors){
-    originalFlavors.unshift('Rainbow Sherbert');
-    return(originalFlavors);
-}
+function addFlavor(arr, flavor) {
+    arr.unshift(flavor);
+    return arr;
+  }
+  
 
 addFlavor(originalFlavors, 'Rainbow Sherbert')
 
@@ -108,10 +111,10 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(originalFlavors){
-   originalFlavors.pop();
-   return(originalFlavors);
-}
+function removeLastFlavor(arr) {
+    arr.pop();
+    return arr;
+  }
 
 removeLastFlavor(originalFlavors)
 
@@ -128,10 +131,9 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(originalFlavors){
-    console.log(originalFlavors[2]);
-    return(originalFlavors[2]);
-}
+function getFlavorByIndex(arr, num) {
+    return arr[num]
+  }
 
 getFlavorByIndex(originalFlavors, 2)
 
@@ -152,10 +154,11 @@ Use the removeFlavorByName function below to do the following:
 */
 
 
-function removeFlavorByName(originalFlavors){
-    originalFlavors.splice(28, 1,)
-    return(originalFlavors);
-}
+function removeLastFlavor(arr) {
+    arr.pop();
+    return arr;
+  }
+  
 
 removeFlavorByName(originalFlavors, "Rocky Road")
 
@@ -183,11 +186,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(originalFlavors){
-    originalFlavors.includes('Chocolate', 0,);
-    let filteredArray = ['Chocolate', 'Chocolate Almond', 'Chocolate Chip', 'Chocolate Fudge', 'Chocolate Mint', 'Chocolate Ribbon' ]
-    return(filteredArray);
-}
+function filterByWord(arr, str) {
+    let filteredArray = [];
+    for (let i = 0; i < arr.length; i++) {
+      if(arr[i].includes(str)) {
+        filteredArray.push(arr[i]);
+      }
+    }
+    return filteredArray;
+  }
+
 filterByWord(originalFlavors, "Chocolate")
 
 
